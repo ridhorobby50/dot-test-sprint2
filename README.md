@@ -16,3 +16,16 @@ Pastikan anda memiliki database yang ada dari Sprint 1
     3. api/v1/cities
 
 - api/v1/provinces dan api/v1/cities secara default akan mengambil data dari database, namun jika ditambahkan param query origins=1, maka akan mengambil data langsung dari rajaOngkir. Struktur data pada response akan terlihat berbeda untuk menunjukkan perbedaan antara data rajaongkir dan data yang berasal dari database
+
+## Unit Test
+- Ada beberapa test yang dibuat dalam unit test, berikut listnya:
+ 1. Login Test (Success)
+ 2. Login Test (MustEnterEmailAndPassword)
+ 3. Get City Test (Unauth)
+ 4. Get City Test (Authorized) from DB
+ 5. Get City Test (Authorized) from RajaOngkir
+ 6. Get Province Test (Unauth)
+ 7. Get Province Test (Authorized) from DB
+ 8. Get Province Test (Authorized) from RajaOngkir
+
+- Untuk mencoba testnya, silahkan jalankan perintah "php artisan test"
