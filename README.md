@@ -5,6 +5,7 @@ Pastikan anda memiliki database yang ada dari Sprint 1
 ## Instalasi
 - Copy isi dari .env.example dan buatlah file .env. Pastekan isi dari .env.example ke file .env yang baru dibuat
 - Ubah Detail pada env dari DB_HOST sampai DB_PASSWORD sesuai dengan database yang digunakan di sprint 1
+- Jalankan perintah composer install untuk install third party dan dependecies yang dibutuhkan
 - Jalankan perintah php artisan jwt:secret untuk membuat jwt secret yang akan diletakkan di .env
 - Jalankan perintah php artisan migrate untuk membuat table users
 - Jalankan perintah php artisan db:seed untuk mengisi table users
