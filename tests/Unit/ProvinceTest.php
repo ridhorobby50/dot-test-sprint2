@@ -8,11 +8,6 @@ use Faker\Factory as Faker;
 
 class ProvinceTest extends TestCase
 {
-    public function test_example()
-    {
-        $this->assertTrue(true);
-    }
-
     public function testUnauthRequestProvince()
     {
         $this->json('GET', 'api/v1/search/province')
