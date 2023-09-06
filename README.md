@@ -9,7 +9,7 @@ Pastikan anda memiliki database yang ada dari Sprint 1
 - Jalankan perintah "php artisan jwt:secret" untuk membuat jwt secret yang akan diletakkan di .env
 - Jalankan perintah "php artisan migrate" untuk membuat table users
 - Jalankan perintah "php artisan db:seed --class=UserSeeder" untuk mengisi table users
-- Jika sudah semua maka anda bisa menjalankan aplikasi dengan menjalankan perintah php artisan serve
+- Jika sudah semua maka anda bisa menjalankan aplikasi dengan menjalankan perintah "php artisan serve"
 - Ada 3 endpoint yang bisa diakses, yakni :
     1. api/v1/login
     2. api/v1/provinces (harus menyertakan token / authorized)
