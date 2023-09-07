@@ -32,6 +32,41 @@ class ProvinceController extends Controller
         }
     }
 
+    /**
+     * @OA\Get(
+     *      path="/api/v1/search/provinces",
+     *      operationId="GetProvinces",
+     *      tags={"Province"},
+     *      summary="Get Data Province",
+     *      security={{"bearer_token":{}}},
+     *      description="Returns data Province",
+     *      @OA\Parameter(
+     *          name="origins",
+     *          description="to switchable data source",
+     *          required=false,
+     *          in="path",
+     *          @OA\Schema(
+     *              type="integer"
+     *          )
+     *      ),
+     *      @OA\Response(
+     *          response=200,
+     *          description="Success get data province",
+     *       ),
+     *      @OA\Response(
+     *          response=400,
+     *          description="Bad Request"
+     *      ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Unauthenticated",
+     *      ),
+     *      @OA\Response(
+     *          response=403,
+     *          description="Forbidden"
+     *      )
+     * )
+     */
     public function getData(Request $request){
         $origins = $request->origins ?? 0;
         if($origins==0){

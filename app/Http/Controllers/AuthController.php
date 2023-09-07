@@ -10,7 +10,53 @@ use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
 
 class AuthController extends Controller
-{
+{   
+    /**
+ * @OA\Schema(
+ *    schema="LoginRequest",
+ *    @OA\Property(
+ *        property="email",
+ *        type="string",
+ *        description="User Email",
+ *        nullable=false,
+ *        format="email"
+ *    ),
+ *    @OA\Property(
+ *        property="password",
+ *        type="string",
+ *        description="User Password",
+ *        nullable=false,
+ *        example="password"
+ *    ),
+ * )
+ *
+ * @OA\Post(
+ *     path="/api/v1/login",
+ *      tags={"Login"},
+ *     summary="Authorize user",
+ *     description="Authorizes user by its email and password",
+ *     operationId="login",
+ *     @OA\RequestBody(
+ *        @OA\JsonContent(ref="#/components/schemas/LoginRequest")
+ *     ),
+ *     @OA\Response(
+ *         response=201,
+ *         description="Authentication successful",
+ *         @OA\JsonContent(
+ *             @OA\Property(
+ *                property="token",
+ *                type="string",
+ *                description="authorization token",
+ *                example="fSPJ2AR0TU0dLB6aiYgtSGHkPnFTfBdh4ltISiSo",
+ *             ),
+ *         )
+ *     ),
+ *     @OA\Response(
+ *         response=500,
+ *         description="Internal server error"
+ *     )
+ * )
+ */
     public function login(Request $request)
     {
         

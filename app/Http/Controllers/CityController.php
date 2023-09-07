@@ -34,6 +34,42 @@ class CityController extends Controller
         }
     }
 
+
+     /**
+     * @OA\Get(
+     *      path="/api/v1/search/cities",
+     *      operationId="GetCities",
+     *      tags={"City"},
+     *      summary="Get Data City",
+     *      security={{"bearer_token":{}}},
+     *      description="Returns data city",
+     *      @OA\Parameter(
+     *          name="origins",
+     *          description="to switchable data source",
+     *          required=false,
+     *          in="path",
+     *          @OA\Schema(
+     *              type="integer"
+     *          )
+     *      ),
+     *      @OA\Response(
+     *          response=200,
+     *          description="Success get data city",
+     *       ),
+     *      @OA\Response(
+     *          response=400,
+     *          description="Bad Request"
+     *      ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Unauthenticated",
+     *      ),
+     *      @OA\Response(
+     *          response=403,
+     *          description="Forbidden"
+     *      )
+     * )
+     */
     public function getData(Request $request){
         $origins = $request->origins ?? 0;
         if($origins==0){
