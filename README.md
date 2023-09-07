@@ -31,3 +31,7 @@ Pastikan anda memiliki database yang ada dari Sprint 1
  8. Get Province Test (Authorized) from RajaOngkir
 
 - Untuk mencoba testnya, silahkan jalankan perintah "php artisan test"
+
+
+## Dokumentasi API
+- Anda bisa melihat list api yang ada dengan mengakses url {HOST}/api/documentation, contoh : http://localhost:8000/api/documentation
