@@ -21,7 +21,7 @@ Pastikan anda memiliki database yang ada dari Sprint 1
 
 - api/v1/login adalah endpoint yang harus diakses terlebih dahulu untuk mendapatkan token. Masukkan salah satu email yang ada di database dan gunakan password "dot-sprint2". Akses dengan method post dan data di raw body.Maka akan mendapatkan response token yang valid.
 
-- api/v1/provinces dan api/v1/cities wajib mengirimkan Bearer token pada header. Secara default akan mengambil data dari database, namun jika ditambahkan param query origins=1, maka akan mengambil data langsung dari rajaOngkir. Struktur data pada response akan terlihat berbeda untuk menunjukkan perbedaan antara data rajaongkir dan data yang berasal dari database
+- api/v1/search/provinces dan api/v1/search/cities wajib mengirimkan Bearer token pada header. Secara default akan mengambil data dari database, namun jika ditambahkan param query origins=1, maka akan mengambil data langsung dari rajaOngkir. Struktur data pada response akan terlihat berbeda untuk menunjukkan perbedaan antara data rajaongkir dan data yang berasal dari database
 
 ## Unit Test
 - Ada beberapa test yang dibuat dalam unit test, berikut listnya:
@@ -38,4 +38,4 @@ Pastikan anda memiliki database yang ada dari Sprint 1
 
 
 ## Dokumentasi API
-- Anda bisa melihat list api yang ada dengan mengakses url {HOST}/api/documentation, contoh : http://localhost:8000/api/documentation
+- Anda bisa melihat list api yang ada dengan mengakses url {HOST}/api/documentation, contoh : http://localhost:8000/api/documentation, pastikan anda telah mengubah value L5_SWAGGER_CONST_HOST di env, sesuaikan dengan link host anda.
