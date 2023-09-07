@@ -11,9 +11,13 @@ Pastikan anda memiliki database yang ada dari Sprint 1
 - Jalankan perintah "php artisan db:seed --class=UserSeeder" untuk mengisi table users
 - Jika sudah semua maka anda bisa menjalankan aplikasi dengan menjalankan perintah "php artisan serve"
 - Ada 3 endpoint yang bisa diakses, yakni :
-    1. api/v1/login
-    2. api/v1/provinces (harus menyertakan token / authorized)
-    3. api/v1/cities (harus menyertakan token / authorized)
+
+| Endpoint                | Payload                       | Authorized? |
+|-------------------------|-------------------------------|-------------|
+| api/v1/login            | raw body :email, password     | no          |
+| api/v1/search/provinces | Param query : origins (1 / 0) | Yes         |
+| api/v1/search/cities    | Param query : origins (1 / 0) | Yes         |
+
 
 - api/v1/login adalah endpoint yang harus diakses terlebih dahulu untuk mendapatkan token. Masukkan salah satu email yang ada di database dan gunakan password "dot-sprint2". Akses dengan method post dan data di raw body.Maka akan mendapatkan response token yang valid.
 
